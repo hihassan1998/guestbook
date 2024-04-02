@@ -1,0 +1,70 @@
+/* Variables */
+:root {
+    --primary-color: #4CAF50; /* Green */
+    --secondary-color: #fff;
+    --accent-color: #333;
+  }
+  
+  /* Body styles */
+  body {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    font-family: "Gill Sans", sans-serif;
+  }
+  
+  /* Header styles */
+  #header {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  
+  #header h1 {
+    color: var(--secondary-color);
+    font-size: 3.5em;
+  }
+  
+  /* Guestbook entries styles */
+  #guestbook-entries {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  
+  /* Form styles */
+  #guestbook-form {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  
+  #guestbook-form input[type="text"] {
+    border: 0;
+    border-radius: 25px;
+    box-shadow: inset 0 0 0 2px var(--secondary-color);
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    outline: none;
+    padding: .5em 1em;
+    width: 55%;
+  }
+  
+  #guestbook-form a#guestbook-submit {
+    background: var(--secondary-color);
+    border: 0;
+    border-radius: 25px;
+    color: var(--primary-color);
+    font-size: 1.25em;
+    font-weight: 400;
+    padding: .75em 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  /* Message bubble */
+  .message-bubble {
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    color: var(--primary-color);
+    font-size: 1.2em;
+    padding: 10px 20px;
+    display: inline-block;
+  }
+  
