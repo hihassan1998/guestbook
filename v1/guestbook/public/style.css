@@ -1,14 +1,7 @@
-/* Variables */
-:root {
-    --primary-color: #4CAF50; /* Green */
-    --secondary-color: #fff;
-    --accent-color: #333;
-  }
-  
-  /* Body styles */
-  body {
-    background-color: var(--primary-color);
-    color: var(--accent-color);
+/* Body styles */
+body {
+    background: linear-gradient(to bottom, #4CAF50, #388E3C); /* Green gradient */
+    color: #fff; /* White font */
     font-family: "Gill Sans", sans-serif;
   }
   
@@ -19,7 +12,6 @@
   }
   
   #header h1 {
-    color: var(--secondary-color);
     font-size: 3.5em;
   }
   
@@ -38,7 +30,7 @@
   #guestbook-form input[type="text"] {
     border: 0;
     border-radius: 25px;
-    box-shadow: inset 0 0 0 2px var(--secondary-color);
+    box-shadow: inset 0 0 0 2px #fff; /* White border */
     font-size: 1.5em;
     margin-bottom: 1em;
     outline: none;
@@ -47,10 +39,10 @@
   }
   
   #guestbook-form a#guestbook-submit {
-    background: var(--secondary-color);
+    background: #fff; /* White background */
     border: 0;
     border-radius: 25px;
-    color: var(--primary-color);
+    color: #4CAF50; /* Green font */
     font-size: 1.25em;
     font-weight: 400;
     padding: .75em 2em;
@@ -60,11 +52,45 @@
   
   /* Message bubble */
   .message-bubble {
-    background-color: var(--secondary-color);
+    background-color: #fff; /* White background */
     border-radius: 20px;
-    color: var(--primary-color);
+    color: #4CAF50; /* Green font */
     font-size: 1.2em;
     padding: 10px 20px;
     display: inline-block;
+  }
+  
+  /* Saved message box */
+  .saved-message-box {
+    background: linear-gradient(to bottom, #4CAF50, #388E3C); /* Green gradient */
+    color: #fff; /* White font */
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .saved-message-box::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 20px;
+    border-color: transparent transparent transparent #388E3C; /* Darker green */
+  }
+  
+  .saved-message-box::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -18px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 9px 0 9px 18px;
+    border-color: transparent transparent transparent #fff; /* White */
   }
   

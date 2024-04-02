@@ -20,15 +20,20 @@ $(document).ready(function() {
       messageContainer.append(messageBubble);
     }
   
+    var showSavedMessageBox = function(message) {
+      var savedMessageBox = $("<div>").addClass("saved-message-box").text(message);
+      entriesElement.prepend(savedMessageBox);
+    }
+  
     var handleSubmission = function(e) {
       e.preventDefault();
       var entryValue = entryContentElement.val()
       if (entryValue.length > 0) {
-        showMessageBubble("Message submitted successfully!");
-        entriesElement.append("<p>...</p>");
+        showSavedMessageBox(entryValue);
+        entryContentElement.val("");
         $.getJSON("rpush/guestbook/" + entryValue, appendGuestbookEntries)
           .done(function() {
-            entryContentElement.val("");
+            showMessageBubble("Message submitted successfully!");
           })
           .fail(function() {
             showMessageBubble("Failed to submit message. Please try again.");
